@@ -1,0 +1,56 @@
+$critical: #e55242;
+$high: #e88542;
+$medium: #8bdef2;
+$low: #f7f79f;
+$tooltip-bg: #666;
+
+.priority-bar {
+	display: inline-block;
+	margin: 50px 0;
+
+	&__priority {
+		height: 125px;
+		width: 100px;
+		margin: 0 40px;
+	}
+
+	.critical {
+		background: $critical;
+	}
+
+	.high {
+		background: $high;
+	}
+
+	.medium {
+		background: $medium;
+	}
+
+	.low {
+		background: $low;
+	}
+
+	.tooltip {
+		position: fixed;
+		width: 120px;
+		height: 25px;
+		margin-top: -28px;
+		text-align: center;
+		margin-left: -10px;
+		line-height: 25px;
+		font-size: 10px;
+		color: #fff;
+		background-color: $tooltip-bg;
+	}
+
+	.tooltip::after {
+		content: " ";
+		position: absolute;
+		bottom: -16px;
+		left: 50%;
+		margin-left: -8px;
+		border-width: 8px;
+		border-style: solid;
+		border-color: $tooltip-bg transparent transparent transparent;
+	}
+}
